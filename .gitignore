@@ -1,4 +1,4 @@
 *.hdf5
 *.onnx
 *.ipynb_checkpoints
-./ONNX/tensorflow/models/*
+./ONNX/tensorflow/models
