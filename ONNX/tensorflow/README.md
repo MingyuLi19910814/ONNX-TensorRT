@@ -8,7 +8,7 @@ conda activate tensorflow
 
 # Introduction
 
-The convert.ipynb shows how to convert keras model and tensorlfow saved_model to ONNX model.  
+The convert.ipynb shows how to convert keras model and tensorflow saved_model to ONNX model.  
 Pretrained Resnet50 model is used.  
 Keras model can be converted both in command line style and python style,  
 while saved_model uses command line style.  
