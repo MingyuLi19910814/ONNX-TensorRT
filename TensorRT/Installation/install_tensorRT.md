@@ -1,3 +1,11 @@
+# Introduction
+
+This document introduces how to install:   
+**nvidia driver 460  
+CUDA 10.2  
+cuDNN 8.2.4  
+tensorRT 8.0.1**
+
 ## 1.1 Install nvidia driver if it's not installed yet
 ```bash
 sudo apt update
@@ -57,7 +65,7 @@ rm cudnn-10.2-linux-x64-v8.2.4.15.tgz
 rm -rf ./cuda
 ```
 
-## 4.1 Install TensorRT 7
+## 4.1 Install TensorRT 8
 Download corresponding TensorRT8 version of your os and architecture from https://developer.nvidia.com/nvidia-tensorrt-8x-download to ~/Downloads. This document uses [TensorRT 8.0.1 GA for Linux x86_64 and CUDA 10.2 TAR package](https://developer.nvidia.com/compute/machine-learning/tensorrt/secure/8.0.1/tars/tensorrt-8.0.1.6.linux.x86_64-gnu.cuda-10.2.cudnn8.2.tar.gz)
 ```bash
 cd ~/Downloads
