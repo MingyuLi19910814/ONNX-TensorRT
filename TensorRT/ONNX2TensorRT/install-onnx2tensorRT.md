@@ -22,9 +22,10 @@ sudo apt-get install libprotobuf-dev protobuf-compiler
 ```
 
 ```bash
-PATH_TO_TRT='/usr/local/TensorRT-8.0.1.6'
+PATH_TO_TRT='/usr/local/TensorRT-8.2.0.6/include'
 cd onnx-tensorrt
 mkdir build && cd build
 cmake .. -DTENSORRT_ROOT=$PATH_TO_TRT && make -j
-export LD_LIBRARY_PATH=$PWD:$LD_LIBRARY_PATH
+sudo make install
+echo "export LD_LIBRARY_PATH=${PWD}:\${LD_LIBRARY_PATH}" >> ~/.bashrc
 ```
