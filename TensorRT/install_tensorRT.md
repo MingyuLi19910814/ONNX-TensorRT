@@ -65,35 +65,6 @@ rm cudnn-10.2-linux-x64-v8.2.4.15.tgz
 rm -rf ./cuda
 ```
 
-## 4.1 Install TensorRT 8
-Download corresponding TensorRT8 version of your os and architecture from https://developer.nvidia.com/nvidia-tensorrt-8x-download to ~/Downloads. This document uses [TensorRT 8.0.1 GA for Linux x86_64 and CUDA 10.2 TAR package](https://developer.nvidia.com/compute/machine-learning/tensorrt/secure/8.0.1/tars/tensorrt-8.0.1.6.linux.x86_64-gnu.cuda-10.2.cudnn8.2.tar.gz)
-```bash
-cd ~/Downloads
-# set your preferred installation directory
-TAR_DIR=/usr/local
-tar xzvf TensorRT-8.0.1.6.Linux.x86_64-gnu.cuda-10.2.cudnn8.2.tar.gz
-sudo mv TensorRT-8.0.1.6 $TAR_DIR
-echo "export LD_LIBRARY_PATH=\${LD_LIBRARY_PATH}:${TAR_DIR}/TensorRT-8.0.1.6/lib" >> ~/.bashrc
-cd $TAR_DIR/TensorRT-8.0.1.6/python
-# select the whl of your python version. This document uses py 3.8
-python3 -m pip install tensorrt-8.0.1.6-cp38-none-linux_x86_64.whl
-cd ../uff
-python3 -m pip install uff-0.6.9-py2.py3-none-any.whl
-cd ../graphsurgeon/
-python3 -m pip install graphsurgeon-0.4.5-py2.py3-none-any.whl
-cd ../onnx_graphsurgeon
-python3 -m pip install onnx_graphsurgeon-0.3.10-py2.py3-none-any.whl
-```
-## 4.2 Verify the installation
-```bash
-TAR_DIR=/usr/local
-cd $TAR_DIR/TensorRT-8.0.1.6/samples/sampleMNIST
-make
-cd ../../bin
-```
-Expected output:  
-![Image](./images/tensorRT-output.png)
-
 ## 4.1 Install TensorRT 8.2 EA
 Download corresponding TensorRT8 version of your os and architecture from https://developer.nvidia.com/nvidia-tensorrt-8x-download to ~/Downloads. This document uses [TensorRT 8.2 EA for Linux x86_64 and CUDA 10.2 TAR Package](https://developer.nvidia.com/compute/machine-learning/tensorrt/secure/8.2.0/tars/tensorrt-8.2.0.6.linux.x86_64-gnu.cuda-10.2.cudnn8.2.tar.gz)
 ```bash
@@ -113,3 +84,14 @@ python3 -m pip install graphsurgeon-0.4.5-py2.py3-none-any.whl
 cd ../onnx_graphsurgeon
 python3 -m pip install onnx_graphsurgeon-0.3.12-py2.py3-none-any.whl
 ```
+
+## 4.2 Verify the installation
+```bash
+TAR_DIR=/usr/local
+cd $TAR_DIR/TensorRT-8.2.0.6/samples/sampleMNIST
+make
+cd ../../bin
+./sample_mnist
+```
+Expected output:  
+![Image](./images/tensorRT-output.png)
