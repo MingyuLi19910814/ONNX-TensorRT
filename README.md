@@ -3,12 +3,10 @@
 Neural networks are usually designed and trained by frameworks like Tensorflow, Pytorch and deployed by TensorRT to achieve better inference runtime. The Tensorflow models and Pytorch models need to be firstly converted to ONNX model and then to TensorRT model. ONNX also has its runtime library ONNXRuntime.  
 ![Image](images/onnx-tensorRT.png)
 This repository contains some code during my study on:  
-1. Conversion from Tensorflow to ONNX  
-2. Conversion from Pytorch to ONNX
-3. Installation of Netron(visualize networks), Nvidia driver, CUDA, cuDNN, TensorRT, onnx2TensorRT
-4. Conversion from ONNX to TensorRT
-5. Inference on ONNXRuntime
-5. Inference on TensorRT
+1. [Conversion from Tensorflow to ONNX and inference on ONNXRuntime](./ONNX/tensorflow/convert.ipynb)  
+2. [Conversion from Pytorch to ONNX and inference on ONNXRuntime](./ONNX/pytorch/convert.ipynb)
+3. [Installation of Netron(visualize networks), Nvidia driver, CUDA, cuDNN, TensorRT, onnx2TensorRT](#installation)
+4. Conversion from ONNX and inference on TensorRT
 
 # Installation
 
