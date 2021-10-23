@@ -138,3 +138,10 @@ cmake .. -DTENSORRT_ROOT=$PATH_TO_TRT && make -j
 sudo make install
 echo "export LD_LIBRARY_PATH=${PWD}:\${LD_LIBRARY_PATH}" >> ~/.bashrc
 ```
+
+## 7. Install Netron for visualization
+```bash
+sudo apt update
+sudo apt install snapd
+sudo snap install netron
+```
